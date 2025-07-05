@@ -1,0 +1,36 @@
+[Unit]
+Description=System Monitoring - Raspberry Pi metrics collector
+After=network.target victoria-metrics.service
+Wants=network.target
+Requires=victoria-metrics.service
+
+[Service]
+Type=simple
+User=system-monitor
+Group=system-monitor
+WorkingDirectory=/opt/system-monitor
+ExecStart=/opt/system-monitor/bin/system-monitor
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+RestartSec=5s
+
+# Environment file for configuration
+EnvironmentFile=-/etc/system-monitor/system-monitor.conf
+
+# Security settings
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/log/system-monitor
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+
+# Resource limits
+LimitNOFILE=4096
+LimitNPROC=1024
+
+[Install]
+WantedBy=multi-user.target

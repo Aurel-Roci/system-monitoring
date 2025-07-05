@@ -1,0 +1,34 @@
+[Unit]
+Description=VictoriaMetrics time series database
+Documentation=https://docs.victoriametrics.com/
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=victoria-metrics
+Group=victoria-metrics
+EnvironmentFile=/etc/victoria-metrics/victoria-metrics.conf
+ExecStart=/bin/bash -c '/usr/local/bin/victoria-metrics-prod -storageDataPath=$STORAGE_DATA_PATH -retentionPeriod=$RETENTION_PERIOD -httpListenAddr=$HTTP_LISTEN_ADDR -loggerLevel=$LOGGER_LEVEL -loggerFormat=$LOGGER_FORMAT -memory.allowedPercent=$MEMORY_ALLOWED_PERCENT -search.maxConcurrentRequests=$MAX_CONCURRENT_REQUESTS -search.maxQueryDuration=$MAX_QUERY_DURATION -dedup.minScrapeInterval=$DEDUP_MIN_SCRAPE_INTERVAL'
+
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+RestartSec=5s
+
+# Security settings
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/lib/victoria-metrics /etc/victoria-metrics
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+
+# Resource limits
+LimitNOFILE=65536
+LimitNPROC=65536
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+# Build artifacts
+bin/
+
+# Data directories (if running locally)
+victoria-metrics-data/
+data/
+
+# Service logs
+*.log
+
+.env
