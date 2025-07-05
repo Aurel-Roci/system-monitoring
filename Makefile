@@ -21,7 +21,6 @@ setup:
 	@echo "Setup VictoriaMetrics/System-Monitoring..."
 	./deployment/install.sh
 
-
 install-sys-monitor:
 	./deployment/install-sys-monitor.sh
 
