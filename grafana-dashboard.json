@@ -18,13 +18,13 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 1,
+  "id": null,
   "links": [],
   "panels": [
     {
       "datasource": {
         "type": "victoriametrics-metrics-datasource",
-        "uid": "beqy5k13np3b4b"
+        "uid": "$DS_VICTORIAMETRICS"
       },
       "fieldConfig": {
         "defaults": {
@@ -63,9 +63,7 @@
         "minVizWidth": 75,
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
+          "calcs": ["lastNotNull"],
           "fields": "",
           "values": false
         },
@@ -73,9 +71,13 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.2",
       "targets": [
         {
+          "datasource": {
+            "type": "victoriametrics-metrics-datasource",
+            "uid": "$DS_VICTORIAMETRICS"
+          },
           "editorMode": "code",
           "expr": "cpu_usage_percent",
           "range": true,
@@ -86,6 +88,10 @@
       "type": "gauge"
     },
     {
+      "datasource": {
+        "type": "victoriametrics-metrics-datasource",
+        "uid": "$DS_VICTORIAMETRICS"
+      },
       "fieldConfig": {
         "defaults": {
           "mappings": [],
@@ -123,9 +129,7 @@
         "minVizWidth": 75,
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
+          "calcs": ["lastNotNull"],
           "fields": "",
           "values": false
         },
@@ -133,9 +137,13 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.2",
       "targets": [
         {
+          "datasource": {
+            "type": "victoriametrics-metrics-datasource",
+            "uid": "$DS_VICTORIAMETRICS"
+          },
           "expr": "memory_usage_percent",
           "refId": "A"
         }
@@ -144,6 +152,10 @@
       "type": "gauge"
     },
     {
+      "datasource": {
+        "type": "victoriametrics-metrics-datasource",
+        "uid": "$DS_VICTORIAMETRICS"
+      },
       "fieldConfig": {
         "defaults": {
           "mappings": [],
@@ -181,9 +193,7 @@
         "minVizWidth": 75,
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
+          "calcs": ["lastNotNull"],
           "fields": "",
           "values": false
         },
@@ -191,9 +201,13 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.2",
       "targets": [
         {
+          "datasource": {
+            "type": "victoriametrics-metrics-datasource",
+            "uid": "$DS_VICTORIAMETRICS"
+          },
           "expr": "system_temperature_celsius",
           "refId": "A"
         }
@@ -202,6 +216,10 @@
       "type": "gauge"
     },
     {
+      "datasource": {
+        "type": "victoriametrics-metrics-datasource",
+        "uid": "$DS_VICTORIAMETRICS"
+      },
       "fieldConfig": {
         "defaults": {
           "mappings": [],
@@ -235,9 +253,7 @@
         "orientation": "auto",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
+          "calcs": ["lastNotNull"],
           "fields": "",
           "values": false
         },
@@ -245,19 +261,31 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.2",
       "targets": [
         {
+          "datasource": {
+            "type": "victoriametrics-metrics-datasource",
+            "uid": "$DS_VICTORIAMETRICS"
+          },
           "expr": "memory_total_mb",
           "legendFormat": "Total MB",
           "refId": "A"
         },
         {
+          "datasource": {
+            "type": "victoriametrics-metrics-datasource",
+            "uid": "$DS_VICTORIAMETRICS"
+          },
           "expr": "memory_available_mb",
           "legendFormat": "Available MB",
           "refId": "B"
         },
         {
+          "datasource": {
+            "type": "victoriametrics-metrics-datasource",
+            "uid": "$DS_VICTORIAMETRICS"
+          },
           "expr": "memory_used_mb",
           "legendFormat": "Used MB",
           "refId": "C"
@@ -267,6 +295,10 @@
       "type": "stat"
     },
     {
+      "datasource": {
+        "type": "victoriametrics-metrics-datasource",
+        "uid": "$DS_VICTORIAMETRICS"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -342,19 +374,31 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.2",
       "targets": [
         {
+          "datasource": {
+            "type": "victoriametrics-metrics-datasource",
+            "uid": "$DS_VICTORIAMETRICS"
+          },
           "expr": "load_average_1min",
           "legendFormat": "1 minute",
           "refId": "A"
         },
         {
+          "datasource": {
+            "type": "victoriametrics-metrics-datasource",
+            "uid": "$DS_VICTORIAMETRICS"
+          },
           "expr": "load_average_5min",
           "legendFormat": "5 minutes",
           "refId": "B"
         },
         {
+          "datasource": {
+            "type": "victoriametrics-metrics-datasource",
+            "uid": "$DS_VICTORIAMETRICS"
+          },
           "expr": "load_average_15min",
           "legendFormat": "15 minutes",
           "refId": "C"
@@ -364,6 +408,10 @@
       "type": "timeseries"
     },
     {
+      "datasource": {
+        "type": "victoriametrics-metrics-datasource",
+        "uid": "$DS_VICTORIAMETRICS"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -441,9 +489,13 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.2",
       "targets": [
         {
+          "datasource": {
+            "type": "victoriametrics-metrics-datasource",
+            "uid": "$DS_VICTORIAMETRICS"
+          },
           "expr": "cpu_usage_percent",
           "legendFormat": "CPU Usage %",
           "refId": "A"
@@ -453,6 +505,10 @@
       "type": "timeseries"
     },
     {
+      "datasource": {
+        "type": "victoriametrics-metrics-datasource",
+        "uid": "$DS_VICTORIAMETRICS"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -530,9 +586,13 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.2",
       "targets": [
         {
+          "datasource": {
+            "type": "victoriametrics-metrics-datasource",
+            "uid": "$DS_VICTORIAMETRICS"
+          },
           "expr": "memory_usage_percent",
           "legendFormat": "Memory Usage %",
           "refId": "A"
@@ -542,6 +602,10 @@
       "type": "timeseries"
     },
     {
+      "datasource": {
+        "type": "victoriametrics-metrics-datasource",
+        "uid": "$DS_VICTORIAMETRICS"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -620,6 +684,10 @@
       "pluginVersion": "12.0.1",
       "targets": [
         {
+          "datasource": {
+            "type": "victoriametrics-metrics-datasource",
+            "uid": "$DS_VICTORIAMETRICS"
+          },
           "expr": "system_temperature_celsius",
           "legendFormat": "Temperature °C",
           "refId": "A"
@@ -632,17 +700,36 @@
   "preload": false,
   "refresh": "30s",
   "schemaVersion": 41,
-  "tags": [],
+  "tags": ["raspberry-pi", "system-monitor", "template"],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "VictoriaMetrics",
+          "value": "VictoriaMetrics"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": "Datasource",
+        "multi": false,
+        "name": "DS_VICTORIAMETRICS",
+        "options": [],
+        "query": "victoriametrics-metrics-datasource",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "type": "datasource"
+      }
+    ]
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Raspberry Pi System Monitor",
-  "uid": "6a875272-6d1b-4883-adb0-e1ee75038e88",
-  "version": 9
+  "title": "🖥️ Raspberry Pi System Monitor Template",
+  "uid": "raspi-system-monitor-template",
+  "version": 1
 }
